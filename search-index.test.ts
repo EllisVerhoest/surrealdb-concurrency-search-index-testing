@@ -10,8 +10,8 @@ describe('Concurrency Test', () => {
         await surreal.connect(ENDPOINT, CONNECTION_OPTIONS);
         await surreal.query(TABLE_DEFINITION);
         await surreal.query(`
-            DEFINE ANALYZER test_analyzer TOKENIZERS blank FILTERS lowercase, ascii, edgengram(1, 10);
-            DEFINE INDEX idx_search ON test_table FIELDS string SEARCH ANALYZER test_analyzer BM25(1.2,0.75) DOC_IDS_ORDER 100 DOC_LENGTHS_ORDER 100 POSTINGS_ORDER 100 TERMS_ORDER 100 DOC_IDS_CACHE 100 DOC_LENGTHS_CACHE 100 POSTINGS_CACHE 100 TERMS_CACHE 100;
+            DEFINE ANALYZER test_analyzer;
+            DEFINE INDEX idx_search ON test_table FIELDS string SEARCH ANALYZER test_analyzer;
         `);
     });
     

@@ -4,7 +4,7 @@ import {CONNECTION_OPTIONS, ENDPOINT} from './env.ts';
 function generateQuery() {
     return `
         CREATE test_table CONTENT {
-            string: '${crypto.randomUUID()}',
+            string: <string>rand::uuid(),
         };
     `
 }

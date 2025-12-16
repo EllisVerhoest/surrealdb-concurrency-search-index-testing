@@ -1,0 +1,15 @@
+{
+  "name": "surreal-db-concurrency-testing",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "surrealdb": "^1.3.2"
+  }
+}
